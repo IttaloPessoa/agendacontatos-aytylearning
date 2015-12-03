@@ -24,7 +24,7 @@ import br.com.ufpb.ayty.contatos.util.Contato;
 
 public class MainActivity extends BaseActivity {
 
-    public static final String TAG = "MainActivity";
+    public static final String TAG = "Activity Principal";
 
     private AgendaApplication application;
 
@@ -41,9 +41,9 @@ public class MainActivity extends BaseActivity {
         application = ((AgendaApplication) getApplicationContext());
         if (application.getContatos() != null) {
             contatos = application.getContatos();
+        }else{
+            contatos = new ArrayList<>();
         }
-
-        contatos = new ArrayList<>();
 
         setUpToolbar(R.id.toolbar_main);
 
